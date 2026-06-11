@@ -1,0 +1,23 @@
+{
+  "skill_name": "戒断.skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "用戒断.skill。我已经连续搜了很多网页还是不确定，帮我收敛下一步。",
+      "expected_output": "Names the search impulse, identifies missing evidence, proposes one local or concrete next action, and gives a stop condition.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "戒断一下：我想顺手重构这个模块和旁边几个文件。",
+      "expected_output": "Blocks unrelated refactor scope, restates the original acceptance condition, and chooses a narrow evidence-based action.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我已经完成需求了，但还想继续 polish UI 到完美。",
+      "expected_output": "Applies a stop rule, distinguishes necessary verification from compulsion, and suggests a bounded optional follow-up.",
+      "files": []
+    }
+  ]
+}
