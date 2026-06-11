@@ -24,6 +24,7 @@ styles.
 interesting-agent-skills/
 ├── README.md
 ├── CONTRIBUTING.md
+├── LICENSE
 ├── docs/
 │   └── readme-intros.md
 ├── skills/
@@ -57,11 +58,18 @@ python3 scripts/validate_skills.py
 
 ## Install Locally
 
-Copy the desired skill into an agent's local skills directory:
+Copy the desired skill into your agent runtime's local skills directory.
+For runtimes that use `~/.agents/skills`, run:
 
 ```bash
 cp -R skills/quick-hit ~/.agents/skills/
 cp -R skills/agent-sobriety ~/.agents/skills/
 ```
 
-Restart or reload the agent session if the runtime does not hot-load new skills.
+For Codex, Claude Code, Copilot, or other `SKILL.md`-compatible runtimes, copy
+the skill directory into that runtime's configured skills directory. Restart or
+reload the agent session if the runtime does not hot-load new skills.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
