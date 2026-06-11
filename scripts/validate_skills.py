@@ -11,6 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS_DIR = ROOT / "skills"
+SKILL_NAME_RE = re.compile(r"^[a-z][a-z0-9-]*$")
 
 
 def fail(message: str) -> None:
@@ -70,9 +71,16 @@ def validate_skill(skill_dir: Path) -> None:
         if not metadata.get(key):
             fail(f"{skill_file}: missing frontmatter {key}")
 
+    skill_name = metadata["name"]
+    if not SKILL_NAME_RE.fullmatch(skill_name):
+        fail(f"{skill_file}: skill name must be lowercase English slug: {skill_name}")
+
+    if skill_dir.name != skill_name:
+        fail(f"{skill_file}: directory name must match skill name {skill_name}")
+
     evals_file = skill_dir / "evals" / "evals.json"
     if evals_file.exists():
-        validate_evals(evals_file, metadata["name"])
+        validate_evals(evals_file, skill_name)
 
     print(f"OK: {skill_dir.relative_to(ROOT)}")
 

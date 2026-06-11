@@ -1,9 +1,9 @@
 ---
-name: "戒断.skill"
-description: Use this skill when the user explicitly asks for 戒断.skill, agent sobriety, impulse control, delay gratification, craving management, stop loops, stop over-searching, stop over-refactoring, stop over-polishing, or when the agent notices repeated tool use, scope creep, premature certainty, or avoidance behavior. This skill helps the agent pause, name the impulse, choose a smaller evidence-based next step, and stop once acceptance criteria are met.
+name: "agent-sobriety"
+description: Use this skill when the user explicitly asks for agent-sobriety, impulse control, delay gratification, craving management, stop loops, stop over-searching, stop over-refactoring, stop over-polishing, or Chinese trigger phrases such as 戒断一下, 别上头, 收敛一下. Also use it when the agent notices repeated tool use, scope creep, premature certainty, or avoidance behavior. This skill helps the agent pause, name the impulse, choose a smaller evidence-based next step, and stop once acceptance criteria are met.
 ---
 
-# 戒断.skill
+# agent-sobriety
 
 This skill is the "impulse control" side of an agent self-control pair.
 It treats agent compulsions as control-flow problems: repeated search,
@@ -107,11 +107,11 @@ Do not:
 - Ask the user questions that local evidence can answer.
 - Use "rigor" to justify unnecessary bureaucracy.
 - Keep running the protocol after the loop has already been broken.
-- Suppress playful or exploratory work when the user explicitly requested `爽.skill`.
+- Suppress playful or exploratory work when the user explicitly requested `quick-hit`.
 
-## Pairing With 爽.skill
+## Pairing With quick-hit
 
-Call for `爽.skill` when:
+Call for `quick-hit` when:
 
 - The user needs momentum more than proof.
 - The work is low-risk and reversible.
@@ -120,5 +120,5 @@ Call for `爽.skill` when:
 
 The pair is intentional:
 
-- `爽.skill` creates momentum.
-- `戒断.skill` keeps momentum from becoming compulsion.
+- `quick-hit` creates momentum.
+- `agent-sobriety` keeps momentum from becoming compulsion.

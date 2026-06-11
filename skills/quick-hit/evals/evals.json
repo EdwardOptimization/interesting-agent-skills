@@ -1,21 +1,21 @@
 {
-  "skill_name": "爽.skill",
+  "skill_name": "quick-hit",
   "evals": [
     {
       "id": 1,
-      "prompt": "用爽.skill，先给这个 CLI 工具做一个能看的 README 第一版，不要过度设计。",
+      "prompt": "Use quick-hit. Give this CLI tool a readable first README draft without overdesigning it.",
       "expected_output": "Produces a concise README draft quickly, labels it as a first version, and avoids broad architecture work.",
       "files": []
     },
     {
       "id": 2,
-      "prompt": "先爽一下，给这个产品 idea 做一个 30 分钟原型计划。",
+      "prompt": "Use quick-hit for a 30-minute prototype plan for this product idea.",
       "expected_output": "Provides a small, time-boxed prototype plan with a visible payoff and a clear next fork.",
       "files": []
     },
     {
       "id": 3,
-      "prompt": "爽.skill：我想立刻重构整个支付模块。",
+      "prompt": "quick-hit: I want to immediately refactor the entire payment module.",
       "expected_output": "Refuses broad risky immediate gratification, narrows to a reversible first step, and suggests stricter verification.",
       "files": []
     }

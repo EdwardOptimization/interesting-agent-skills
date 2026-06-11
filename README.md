@@ -1,17 +1,22 @@
 # Interesting Agent Skills
 
-Personal incubator for unusual, useful, or experimental agent skills.
+An incubator for unusual, useful, and behavior-shaping agent skills.
 
-This repository is intentionally broader than project-specific skill packs. Use
-it for skills that are worth keeping, testing, and possibly publishing later,
-but that do not belong to a single product or research repo.
+This repository collects small skill packages that change how an agent works:
+how it starts, stops, verifies, explores, resists loops, or turns a fuzzy idea
+into a usable artifact. It is intentionally broader than project-specific skill
+packs and is meant for skills that are worth testing before they are published
+or promoted elsewhere.
+
+See [docs/readme-intros.md](docs/readme-intros.md) for alternate README intro
+styles.
 
 ## Current Skills
 
 | Skill | Purpose | Status |
 | --- | --- | --- |
-| `爽.skill` | Immediate-gratification mode for fast, reversible, honest quick wins. | draft |
-| `戒断.skill` | Agent impulse-control mode for delaying over-searching, over-refactoring, over-polishing, and repeated tool loops. | draft |
+| `quick-hit` | Immediate-gratification mode for fast, reversible, honest quick wins. | draft |
+| `agent-sobriety` | Agent impulse-control mode for delaying over-searching, over-refactoring, over-polishing, and repeated tool loops. | draft |
 
 ## Repository Layout
 
@@ -19,11 +24,13 @@ but that do not belong to a single product or research repo.
 interesting-agent-skills/
 ├── README.md
 ├── CONTRIBUTING.md
+├── docs/
+│   └── readme-intros.md
 ├── skills/
-│   ├── 爽.skill/
+│   ├── quick-hit/
 │   │   ├── SKILL.md
 │   │   └── evals/evals.json
-│   └── 戒断.skill/
+│   └── agent-sobriety/
 │       ├── SKILL.md
 │       └── evals/evals.json
 └── scripts/
@@ -53,8 +60,8 @@ python3 scripts/validate_skills.py
 Copy the desired skill into an agent's local skills directory:
 
 ```bash
-cp -R skills/爽.skill ~/.agents/skills/
-cp -R skills/戒断.skill ~/.agents/skills/
+cp -R skills/quick-hit ~/.agents/skills/
+cp -R skills/agent-sobriety ~/.agents/skills/
 ```
 
 Restart or reload the agent session if the runtime does not hot-load new skills.

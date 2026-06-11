@@ -1,9 +1,9 @@
 ---
-name: "爽.skill"
-description: Use this skill when the user explicitly asks for 爽.skill, 及时满足, immediate gratification, quick wins, playful momentum, vibe-first exploration, or a deliberately fast low-friction agent mode. This skill helps the agent produce a small visible payoff quickly while keeping the work reversible and honest about risk. Do not use for high-stakes medical, legal, financial, security, destructive filesystem, or production-release decisions unless paired with a stricter verification skill.
+name: "quick-hit"
+description: Use this skill when the user explicitly asks for quick-hit, immediate gratification, quick wins, playful momentum, vibe-first exploration, a deliberately fast low-friction agent mode, or Chinese trigger phrases such as 先爽一下, 及时满足, 快速做个版本. This skill helps the agent produce a small visible payoff quickly while keeping the work reversible and honest about risk. Do not use for high-stakes medical, legal, financial, security, destructive filesystem, or production-release decisions unless paired with a stricter verification skill.
 ---
 
-# 爽.skill
+# quick-hit
 
 This skill is the "immediate payoff" side of an agent self-control pair.
 It gives the user fast visible progress, a concrete artifact, or a short answer
@@ -43,7 +43,7 @@ Avoid this skill when the task is mainly:
 - A request that already asks for careful review, proof, or root-cause analysis.
 
 If the agent notices it is using this skill to escape a hard verification step,
-switch to `戒断.skill`.
+switch to `agent-sobriety`.
 
 ## Workflow
 
@@ -60,11 +60,11 @@ switch to `戒断.skill`.
 
 4. Keep the safety boundary.
    If the task touches irreversible actions or high-risk domains, pause the
-   "爽" mode and ask for a stricter path.
+   quick-hit mode and ask for a stricter path.
 
 5. Stop after the quick win.
    Summarize what exists now and offer the next fork:
-   continue polishing, verify rigorously, or hand off to `戒断.skill`.
+   continue polishing, verify rigorously, or hand off to `agent-sobriety`.
 
 ## Output Style
 
@@ -98,9 +98,9 @@ Do not:
 - Continue polishing after the quick win has already been delivered.
 - Use "vibe" as an excuse to ignore user constraints.
 
-## Pairing With 戒断.skill
+## Pairing With agent-sobriety
 
-Call for `戒断.skill` when any of these show up:
+Call for `agent-sobriety` when any of these show up:
 
 - The agent wants to search again without a specific missing fact.
 - The agent wants to refactor unrelated code.
@@ -110,5 +110,5 @@ Call for `戒断.skill` when any of these show up:
 
 The pair is intentional:
 
-- `爽.skill` creates momentum.
-- `戒断.skill` prevents momentum from becoming compulsion.
+- `quick-hit` creates momentum.
+- `agent-sobriety` prevents momentum from becoming compulsion.
