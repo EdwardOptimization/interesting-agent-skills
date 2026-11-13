@@ -42,6 +42,29 @@ items on subsequent scans. Absence from the target is acceptable only with an
 explicit disposition; retired tasks need absence checks. Do not silently revive
 a task the user stopped.
 
+## Confirm the Migration Checklist
+
+Before executing the migration, present the discovered ledger as a user-facing
+checklist. Include applications/runtimes, files/data, users/permissions, services,
+schedules, desktop settings, and credentials by purpose only. Show the proposed
+action, destination, and acceptance test for each item. Highlight exclusions,
+archives, retired jobs, version differences, unreadable scopes, target data that
+would be overwritten, and expected downtime and rollback limits.
+
+Ask the user to confirm or amend this concrete scope once. Record the approved
+checklist revision and the confirming instruction as the acceptance baseline.
+An existing confirmation covering that checklist and execution phase counts;
+do not request it again. A broad initial request to migrate does not approve
+newly discovered exclusions or destructive effects. While confirmation is pending,
+continue authorized discovery and planning, not dependent transfer or cutover.
+
+Execute routine work within the approved scope autonomously. Add newly discovered
+items to the ledger and flag unresolved scope. Seek confirmation only for material
+changes not already authorized, such as additional discarded data, overwriting
+target state, retiring more jobs, or expanding downtime. Continue unaffected work.
+Never treat checklist approval as permission to format or wipe the source; that
+requires separate, exact retirement authorization after acceptance.
+
 ## Choose and Perform the Transfer
 
 Choose selective rebuild/restore or offline disk/filesystem cloning according

@@ -17,7 +17,7 @@ styles.
 | --- | --- | --- |
 | `quick-hit` | Immediate-gratification mode for fast, reversible, honest quick wins. | draft |
 | `agent-sobriety` | Agent impulse-control mode for delaying over-searching, over-refactoring, over-polishing, and repeated tool loops. | draft |
-| [`linux-system-migration`](skills/linux-system-migration/SKILL.md) | Linux-to-Linux host migration with inventory reconciliation, workflow acceptance, cutover, and source retirement gates. | draft |
+| [`linux-system-migration`](skills/linux-system-migration/SKILL.md) | Linux-to-Linux host migration with a user-confirmed inventory checklist, reconciliation, workflow acceptance, cutover, and source retirement gates. | draft |
 
 ## Repository Layout
 

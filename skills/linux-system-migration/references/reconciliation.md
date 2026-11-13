@@ -24,6 +24,28 @@ The matrix is a coverage aid, not a requirement to migrate all listed state.
 Examples: caches may be rebuilt, an unused crawler retired, cold data archived,
 and a source-specific GPU stack excluded with a recorded reason.
 
+## Checklist Confirmation Format
+
+Present a concise summary with a complete attached ledger when the inventory is
+large. Group by workflow or owner so the user can recognize what is being kept.
+The user decides outcomes and exceptions; the agent chooses routine commands.
+
+| Item / owner | Source facts | Proposed action | Destination / difference | Acceptance |
+| --- | --- | --- | --- | --- |
+| Terminal settings / desktop user | Discovered package and profile path | Reinstall application and migrate profile | Named target user; note any version change | Profile comparison and real session appearance |
+| Large data tree / data owner | Discovered path, size, and usage evidence | Archive, subject to confirmation | Exact archive location; absent from live target | Integrity and isolated restore test |
+| Scheduled job / service user | Actual schedule and current enabled state | Migrate or retire as instructed | Sole execution host or required absence | Real job result or schedule/process absence |
+
+List sensitive entries by purpose, owner, and access requirement; omit secret
+values. Include inventory coverage gaps, proposed downtime, rollback window,
+target overwrite effects, and observation/retirement conditions below the table.
+Do not ask the user to approve unreadable data as successfully accounted for.
+
+Record the approved revision, confirmation time/instruction, and any amendments.
+Maintain progress and evidence against that baseline without replacing the
+approved scope silently. A later material change needs a focused amendment,
+not another request to approve the entire unchanged checklist.
+
 ## Frequent False Positives
 
 - A directory exists but nested data is missing: compare manifests/content and
