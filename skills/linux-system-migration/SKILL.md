@@ -68,6 +68,15 @@ and their rollback implications explicitly if needed. Snapshot candidate version
 in the approved ledger; report meaningful drift at execution instead of silently
 following a moving latest release.
 
+Inventory paid licenses and subscriptions separately from application login.
+Include entitlement/version coverage, device-seat limits, source deactivation,
+target activation, and required account access in the checklist. Verify current
+vendor transfer rules. Prepare the target, then follow any required old-device
+deactivation before new-device activation; test the licensed feature and record
+seat release before source retirement. Keep keys private. If transfer is blocked,
+record it as pending and continue unrelated work. Do not cancel subscriptions or
+revoke unrelated devices as part of transferring one machine.
+
 Ask the user to confirm or amend this concrete scope once. Record the approved
 checklist revision and the confirming instruction as the acceptance baseline.
 An existing confirmation covering that checklist and execution phase counts;

@@ -15,6 +15,7 @@ source, or excluded by agreement; do not manufacture missing evidence.
 | Scheduled work | Every relevant user's and root's crontab, /etc/cron.*, anacron, system/user timers, at jobs, application schedulers | Exact command, user, timezone, environment, writable output, completed result, no duplicate source writer |
 | Desktop and user settings | Dotfiles, XDG config/data/state, dconf, terminal profile, editor/browser state, input methods and dictionaries, fonts, extensions, keyrings | Real logged-in session; terminal appearance, actual input and candidate selection, expected application settings |
 | Credentials | SSH/client keys, env secrets, token stores, browser cookies, encrypted keyrings, application auth | Restricted permissions and working intended login/API; reauthenticate expired or device-bound tokens |
+| Licenses and subscriptions | Paid applications, license type, entitled versions/platforms, seats, device activations, vendor transfer method, account access | Required source seat released; target licensed feature works on the approved version; unresolved transfers remain pending |
 | Data services and containers | Databases/WAL, volumes, bind mounts, Compose files, container secrets, storage drivers | Consistent restore and query, volume permissions, container health and application behavior |
 | Clients and endpoints | Host aliases, DHCP reservations if used, DNS, desktop launchers, remote MCP/API consumers | Request from actual client reaches target; old endpoint references accounted for |
 | Backups and cold data | Source manifests, exact archive destination, restore dependencies, encryption access, retention | Integrity and isolated restore evidence; migrated backup jobs produce valid new backups |
@@ -66,6 +67,35 @@ deviations from the approved policy. Verify installed versions during acceptance
 Keep application selection distinct from project dependency locks, database
 format upgrades, and the hardware boot stack. Explicitly review those changes
 when needed, including whether restored data can still run on the rollback host.
+
+## License and Subscription Transfer
+
+Treat paid software such as a device-activated editor as a separate ledger item.
+Do not assume that copying its configuration or signing in transfers activation,
+or that every paid product requires deactivation. Check current official vendor
+instructions and the user's actual entitlement and seat state.
+
+Record the application, owner, entitlement type (perpetual, subscription, or
+other), covered version/platform, device limit and current seats, transfer method,
+and who must perform account or activation steps. Reference a protected credential
+location; never put license keys, payment details, tokens, or recovery codes in
+the checklist, command logs, or public evidence.
+
+Stage the target application and data first where possible. If the vendor or seat
+limit requires releasing the source activation first, do so at the agreed cutover,
+then activate the target and test an entitled feature. Record both transitions;
+launching a trial or reaching a login screen is not activation acceptance. If
+coexistence is permitted, follow the approved overlap and release the old seat
+before source retirement when required.
+
+If the source is offline, check supported account-portal deauthorization or vendor
+recovery. If account access, seat release, or activation remains unavailable, keep
+that item pending; source formatting does not prove that the seat was released.
+Identify any user-only action and continue unrelated approved migration work.
+Include license reassignment in rollback planning; a deactivated source may need
+reactivation before it can resume the licensed workflow. Changing billing plans,
+buying another seat, canceling renewal, or revoking unrelated devices is outside
+one-device transfer authority unless explicitly requested.
 
 ## Frequent False Positives
 
