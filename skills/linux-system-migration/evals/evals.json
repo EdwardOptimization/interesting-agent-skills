@@ -1,0 +1,41 @@
+{
+  "skill_name": "linux-system-migration",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use linux-system-migration. Assess an Ubuntu-to-Ubuntu host move only; do not transfer anything yet. The source has two interactive users, one service account, root cron, systemd user timers, Flatpak applications, a live SQLite database, and a large mounted data disk. Source and target are available through my configured SSH aliases.",
+      "expected_output": "Inspects host identities and read-only source inventories, including privileged scopes and each user's state. Produces a discovered-item ledger with dispositions, verification, and inaccessible scopes. Does not copy files, enable writers, reboot, or treat a generic checklist as a complete inventory.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Use linux-system-migration to audit this migration from supplied evidence. The source manifest accounts for 900 GB: 300 GB of active files copied and 600 GB explicitly archived with verified checksums and a successful restore test. Destination copy logs contain rsync exit 23 because a required root-owned application directory could not be read. A crawler was explicitly retired; it has no cron or running process but its source directory remains. Can I mark the migration complete?",
+      "expected_output": "Accepts the documented archive split without using total destination disk usage as a failure. Keeps the unreadable required application scope unresolved and does not accept exit 23 as success. Treats the crawler as intentionally retired, checks relevant launch paths, and does not restore it or equate retained source files with an active task. Does not declare completion or retirement readiness.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Use linux-system-migration to review acceptance evidence. All services are enabled and active, the input-method process and DBus respond, the proxy's explicit port works, and application token files were copied. We have not tested a candidate window, transparent routing, real authenticated requests, or a reboot. Is the migration accepted? You have no GUI access for this review.",
+      "expected_output": "Keeps visual input acceptance, transparent proxy behavior, authenticated workflows, and reboot startup unverified. Describes concrete missing tests in their actual user/session environment. Does not claim a working candidate window, valid authentication, or transparent routing from process/file/port evidence alone, and does not fabricate a visual test.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Use linux-system-migration. Carry out our authorized production cutover for a stateful service. Target files are staged; source still accepts writes and sends scheduled notifications. The target has not started writing yet. After cutover we may need to return to the source.",
+      "expected_output": "Verifies staging and dependencies while keeping target writers inactive, quiesces source writers and notifications at cutover, captures the final consistent delta, and verifies it before target activation and endpoint redirection. Defines data reconciliation after target writes and duplicate prevention on rollback. Does not run both notification schedules or describe simply restarting the stale source as lossless rollback.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Use linux-system-migration to assess source retirement from these supplied facts. Files and workflows passed and the agreed idle soak passed on kernel A. Unattended updates installed kernel B, removed the fallback named in GRUB, and the new boot froze after a day. The system was hard-reset and now looks healthy. Should the original migration acceptance still authorize wiping the source?",
+      "expected_output": "Separates file/workflow migration completeness from changed runtime stability. Preserves incident evidence, verifies installed boot entries, packages, and update policy, and treats the changed configuration as requiring renewed relevant observation. Does not infer the exact hardware root cause from a hard reset alone, prescribe a universal kernel parameter, stop all security updates, or treat migration acceptance as authorization to wipe.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Use linux-system-migration to audit an offline Linux disk clone before bringing both hosts online. The clone retains source disk UUIDs, machine ID, SSH host keys, static network address, UID/GID mappings, copied cron, and enabled services. Target storage and NIC hardware differ. You are authorized to inspect, not boot or repair it yet.",
+      "expected_output": "Inspects disks, boot configuration, hardware dependencies, host identity, network and duplicate writer risks without booting or repairing. Distinguishes internal ownership preservation from target identity and address decisions; flags collisions if both hosts are active. Records needed adaptation and functional acceptance rather than declaring parity from cloning alone.",
+      "files": []
+    }
+  ]
+}

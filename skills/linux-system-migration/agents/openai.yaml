@@ -1,0 +1,4 @@
+interface:
+  display_name: "Linux System Migration"
+  short_description: "Migrate Linux hosts with inventory and workflow acceptance"
+  default_prompt: "Use $linux-system-migration to inventory my source and target Linux hosts, reconcile migration scope, and carry out the requested phase with evidence."
