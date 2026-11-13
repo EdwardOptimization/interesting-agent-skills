@@ -46,6 +46,27 @@ Maintain progress and evidence against that baseline without replacing the
 approved scope silently. A later material change needs a focused amendment,
 not another request to approve the entire unchanged checklist.
 
+## Software Version Decision
+
+Ask once for the default strategy and list exceptions within the checklist:
+
+| Strategy | Intended result | Exceptions to resolve before installation |
+| --- | --- | --- |
+| Same as source | Reproduce application/runtime behavior on the source versions | Version unavailable, unsupported, incompatible with target, or unable to meet a required workflow |
+| Latest target-compatible stable | Use the newest stable candidate from the agreed trusted channel that supports the target and workflows | Major/configuration/data-format changes, dependency constraints, rollback limitations, unavailable compatibility evidence |
+
+For each application or group, record source version, target candidate/version
+and channel, chosen strategy/exception, compatibility evidence or uncertainty,
+and functional test. "Latest" is scoped to the agreed channel and time of review;
+do not equate it with an upstream prerelease or a newer package number alone.
+List security/support limitations of preserving an old version without silently
+changing the user's choice. Ask only about unresolved exceptions or meaningful
+deviations from the approved policy. Verify installed versions during acceptance.
+
+Keep application selection distinct from project dependency locks, database
+format upgrades, and the hardware boot stack. Explicitly review those changes
+when needed, including whether restored data can still run on the rollback host.
+
 ## Frequent False Positives
 
 - A directory exists but nested data is missing: compare manifests/content and

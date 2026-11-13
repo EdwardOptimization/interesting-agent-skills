@@ -51,6 +51,23 @@ action, destination, and acceptance test for each item. Highlight exclusions,
 archives, retired jobs, version differences, unreadable scopes, target data that
 would be overwritten, and expected downtime and rollback limits.
 
+Include a software version policy for user confirmation: preserve source versions,
+or use the latest stable versions compatible with the target OS/architecture and
+required workflows from trusted supported channels. Offer a default policy plus
+per-application or application-group exceptions, rather than a prompt per package.
+Record source version, available target candidate/channel, proposed version, and
+compatibility or data-format changes. Missing evidence stays unknown; "newer" is
+not acceptance evidence. If an exact version is unavailable or incompatible, flag
+the exception and obtain agreement before substituting. An approved alternative
+rule can already cover that exception.
+
+Respect project lockfiles and runtime compatibility; a general application upgrade
+choice does not authorize rewriting pinned dependencies, upgrading database
+formats, or moving kernels/drivers/firmware to new versions. Include those changes
+and their rollback implications explicitly if needed. Snapshot candidate versions
+in the approved ledger; report meaningful drift at execution instead of silently
+following a moving latest release.
+
 Ask the user to confirm or amend this concrete scope once. Record the approved
 checklist revision and the confirming instruction as the acceptance baseline.
 An existing confirmation covering that checklist and execution phase counts;
@@ -84,8 +101,9 @@ access. Neither method guarantees functional parity by itself.
   identity collisions and boot adaptation before both hosts return to the network.
 - Reinstall software from trusted sources where appropriate; inventory apt/rpm,
   Snap, Flatpak, language tools, and manual installs. Distinguish application
-  state from rebuildable payloads and caches. Preserve supported versions or
-  record tested differences.
+  state from rebuildable payloads and caches. Install according to the approved
+  version policy and exceptions; verify actual installed versions against the
+  ledger and exercise migrated configuration/data with those versions.
 - Transfer credentials through protected channels without logging contents.
   File presence does not prove valid OAuth, keyring access, or application login.
 
